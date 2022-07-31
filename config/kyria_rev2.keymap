@@ -71,8 +71,8 @@ bindings = <
 layer_2 { // symbols and braces
 sensor-bindings = <&inc_dec_kp N O &inc_dec_kp C_VOL_UP C_VOL_DN>;
 bindings = <
-// TODO: braces (maybe brace where default is left and shift makes right?)
 // TODO: symbols
+// TODO: braces (maybe brace where default is left and shift makes right?)
 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮                                               ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
       &trans     &none      &none      &none      &none      &none                                                      &none      &none      &none      &none      &none      &trans
 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                                               ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
@@ -89,8 +89,6 @@ layer_3 { // funciton keys and others
 // TODO: Function keys and obscure stuff like printscreen/brightness/insert
 sensor-bindings = <&inc_dec_kp N O &inc_dec_kp C_VOL_UP C_VOL_DN>;
 bindings = <
-// TODO: braces (maybe brace where default is left and shift makes right?)
-// TODO: symbols
 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮                                               ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
       &trans     &none      &none      &none      &none      &none                                                      &none      &none      &none      &none      &none      &trans
 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                                               ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
