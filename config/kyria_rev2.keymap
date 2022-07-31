@@ -76,7 +76,6 @@ bindings = <
 >;
 }; // END layer_2
 
-/*
 // example conditional layers from docs:
 conditional_layers {
 	compatible = "zmk,conditional-layers";
@@ -101,6 +100,6 @@ bindings = <
 //                                  ╰──────────┴──────────┴──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────┴──────────┴──────────╯
 >;
 }; // END layer_3
-*/
+
 }; // END keymap
 }; // END /
