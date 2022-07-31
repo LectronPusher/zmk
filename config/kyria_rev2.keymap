@@ -24,8 +24,8 @@ bindings = <
       &none      &kp Z      &kp X      &kp C      &kp V      &kp B    &kp LALT     &none          &none      &none      &kp N      &kp M    &kp COMMA   &kp DOT    &kp FSLH     &none
 //   &kp LSHFT   &kp Z      &kp X      &kp C      &kp V      &kp B    &kp LSHFT  &kp LSHFT      &kp LSHFT  &kp LSHFT    &kp N      &kp M    &kp COMMA   &kp DOT    &kp FSLH  &kp RCTRL
 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-//                                        &none    &kp LMETA   &kp DEL   &kp LSHFT  &kp LCRTL      &kp ENTER   &kp SPACE   &kp BSPC  &kp none    &none
-                                     &kp LGUI    &kp DEL    &kp RET   &kp SPACE   &kp ESC        &kp RET   &kp SPACE   &kp TAB    &kp BSPC   &kp RALT
+                                       &none    &kp LMETA   &kp DEL   &kp LSHFT  &kp LCRTL      &kp ENTER   &kp SPACE   &kp BSPC  &kp none    &none
+//                                    &kp LGUI    &kp DEL    &kp RET   &kp SPACE   &kp ESC        &kp RET   &kp SPACE   &kp TAB    &kp BSPC   &kp RALT
 //                                  ╰──────────┴──────────┴──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────┴──────────┴──────────╯
 >;
 
