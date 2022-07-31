@@ -15,15 +15,15 @@
  */
 
 / {
-	// example combos from docs:
-	combos {
-		compatible = "zmk,combos";
-		combo_esc {
-			timeout-ms = <50>;
-			key-positions = <0 1>;
-			bindings = <&kp ESC>;
-		};
-	};
+// 	// example combos from docs:
+// 	combos {
+// 		compatible = "zmk,combos";
+// 		combo_esc {
+// 			timeout-ms = <50>;
+// 			key-positions = <0 1>;
+// 			bindings = <&kp ESC>;
+// 		};
+// 	};
 	
 	keymap {
 // no I'm not tabbing these an extra 8-16 characters longer than they already are
@@ -59,7 +59,7 @@ layer_1 { // navigation and numpad
 >;
 }; // END layer_1
 
-layer_2 {
+layer_2 { // symbols and braces
 	sensor-bindings = <&inc_dec_kp N O &inc_dec_kp C_VOL_UP C_VOL_DN>;
 	bindings = <
 // TODO: braces (maybe brace where default is left and shift makes right?)
@@ -85,7 +85,7 @@ conditional_layers {
 	};
 };
 
-layer_3 {
+layer_3 { // funciton keys and others
 	sensor-bindings = <&inc_dec_kp N O &inc_dec_kp C_VOL_UP C_VOL_DN>;
 	bindings = <
 // TODO: Function keys and obscure stuff like printscreen/brightness/insert
