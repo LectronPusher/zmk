@@ -11,12 +11,7 @@
 	keymap {
 		compatible = "zmk,keymap";
 
-		default_layer {
-// ---------------------------------------------------------------------------------------------------------------------------------
-// |  ESC  |  Q  |  W  |  E   |  R   |  T   |                                          |  Y   |  U    |  I    |  O   |   P   |   \  |
-// |  TAB  |  A  |  S  |  D   |  F   |  G   |                                          |  H   |  J    |  K    |  L   |   ;   |   '  |
-// | SHIFT |  Z  |  X  |  C   |  V   |  B   | L SHIFT | L SHIFT |  | L SHIFT | L SHIFT |  N   |  M    |  ,    |  .   |   /   | CTRL |
-//                     | GUI  | DEL  | RET  |  SPACE  |   ESC   |  |   RET   |  SPACE  | TAB  | BSPC  | R-ALT |
+		layer_0 {
 			bindings = <
 	&kp ESC   &kp Q &kp W &kp E &kp R &kp T                                                &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSLH
 	&kp TAB   &kp A &kp S &kp D &kp F &kp G                                                &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
@@ -28,3 +23,20 @@
 		};
 	};
 };
+
+/*
+layer_0 { // the default layer
+	bindings = <
+// ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮                                               ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
+     &kp TAB     &kp Q      &kp W      &kp E      &kp R      &kp T                                                      &kp Y      &kp U      &kp I      &kp O      &kp P    &kp C_MUTE // knob goes here
+// ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                                               ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+     &kp ESC     &kp A      &kp S      &kp D      &kp F      &kp G                                                      &kp H      &kp J      &kp K      &kp L     &kp SEMI   &kp SQT
+// ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┬──────────╮   ╭──────────┬──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+      &none      &kp Z      &kp X      &kp C      &kp V      &kp B    &kp LALT     &none          &none      &none      &kp N      &kp M    &kp COMMA   &kp DOT    &kp FSLH     &none
+// ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
+                                       &none    &kp LMETA   &kp DEL   &kp LSHFT  &kp LCRTL      &kp ENTER   &kp SPACE   &kp BSPC  &kp none    &none
+//                                  ╰──────────┴──────────┴──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────┴──────────┴──────────╯
+>;
+sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>; // volume knob on top right corner only - none on left side
+};
+*/
