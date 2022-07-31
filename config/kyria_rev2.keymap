@@ -37,16 +37,16 @@ bindings = <
 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                                               ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
      &kp ESC     &kp A      &kp S      &kp D      &kp F      &kp G                                                      &kp H      &kp J      &kp K      &kp L     &kp SEMI   &kp SQT
 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┬──────────╮   ╭──────────┬──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-      &none      &kp Z      &kp X      &kp C      &kp V      &kp B    &kp LALT     &none          &none      &none      &kp N      &kp M    &kp COMMA   &kp DOT    &kp FSLH     &none
+      &mo 1      &kp Z      &kp X      &kp C      &kp V      &kp B    &kp LALT     &none          &none      &none      &kp N      &kp M    &kp COMMA   &kp DOT    &kp FSLH    &mo 2
 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
                                        &none    &kp LMETA   &kp DEL   &kp LSHFT  &kp LCTRL      &kp ENTER  &kp SPACE   &kp BSPC    &none      &none
 //                                  ╰──────────┴──────────┴──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────┴──────────┴──────────╯
 >;
 }; // END layer_0
 
-/*
 layer_1 { // navigation and numpad
-	bindings = <
+sensor-bindings = <&inc_dec_kp N O &inc_dec_kp C_VOL_UP C_VOL_DN>;
+bindings = <
 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮                                               ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
       &trans     &none     &kp HOME    &kp UP    &kp END   &kp PG_UP                                                    &none    &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp EQUAL    &trans
 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                                               ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
@@ -57,11 +57,11 @@ layer_1 { // navigation and numpad
                                        &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
 //                                  ╰──────────┴──────────┴──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────┴──────────┴──────────╯
 >;
-sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
 }; // END layer_1
 
 layer_2 { // symbols and braces
-	bindings = <
+sensor-bindings = <&inc_dec_kp N O &inc_dec_kp C_VOL_UP C_VOL_DN>;
+bindings = <
 // TODO: braces (maybe brace where default is left and shift makes right?)
 // TODO: symbols
 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮                                               ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
@@ -74,9 +74,9 @@ layer_2 { // symbols and braces
                                        &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
 //                                  ╰──────────┴──────────┴──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────┴──────────┴──────────╯
 >;
-sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
 }; // END layer_2
 
+/*
 // example conditional layers from docs:
 conditional_layers {
 	compatible = "zmk,conditional-layers";
@@ -87,7 +87,8 @@ conditional_layers {
 };
 
 layer_3 { // funciton keys and others
-	bindings = <
+sensor-bindings = <&inc_dec_kp N O &inc_dec_kp C_VOL_UP C_VOL_DN>;
+bindings = <
 // TODO: Function keys and obscure stuff like printscreen/brightness/insert
 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮                                               ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
       &trans     &none      &none      &none      &none      &none                                                      &none      &none      &none      &none      &none      &trans
@@ -99,7 +100,6 @@ layer_3 { // funciton keys and others
                                        &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
 //                                  ╰──────────┴──────────┴──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────┴──────────┴──────────╯
 >;
-sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
 }; // END layer_3
 */
 }; // END keymap
