@@ -39,29 +39,29 @@
 compatible = "zmk,keymap";
 
 layer_0 { // the default layer
-sensor-bindings = <&inc_dec_kp N O &inc_dec_kp C_VOL_UP C_VOL_DN>; // volume knob on top right corner only - none on left side
+sensor-bindings = <&inc_dec_kp N O &inc_dec_kp C_VOL_UP C_VOL_DN>; // knob on top right corner (none on the left side) - volume up/down and mute
 bindings = <
 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮                                               ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
      &kp TAB     &kp Q      &kp W      &kp E      &kp R      &kp T                                                      &kp Y      &kp U      &kp I      &kp O      &kp P    &kp C_MUTE
 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                                               ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
      &kp ESC     &kp A      &kp S      &kp D      &kp F      &kp G                                                      &kp H      &kp J      &kp K      &kp L     &kp SEMI   &kp SQT
 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┬──────────╮   ╭──────────┬──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-      &mo 1      &kp Z      &kp X      &kp C      &kp V      &kp B    &kp LALT     &none          &none      &none      &kp N      &kp M    &kp COMMA   &kp DOT    &kp FSLH    &mo 2
+      &mo 1      &kp Z      &kp X      &kp C      &kp V      &kp B    &kp LALT    &kp LALT        &none      &none      &kp N      &kp M    &kp COMMA   &kp DOT    &kp FSLH    &mo 2
 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-                                       &none    &kp LMETA   &kp DEL   &kp LSHFT  &kp LCTRL      &kp ENTER  &kp SPACE   &kp BSPC    &none      &none
+                                       &none    &kp LMETA   &kp DEL   &kp LSHFT  &kp LCTRL      &kp ENTER  &kp SPACE   &kp BSPC  &kp K_APP    &none
 //                                  ╰──────────┴──────────┴──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────┴──────────┴──────────╯
 >;
 }; // END layer_0
 
 layer_1 { // navigation and numpad
-sensor-bindings = <&inc_dec_kp N O &inc_dec_kp C_VOL_UP C_VOL_DN>;
+sensor-bindings = <&inc_dec_kp N O &inc_dec_kp C_BRI_UP C_BRI_DN>; // brightness and pause/play
 bindings = <
 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮                                               ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-      &trans     &none     &kp HOME    &kp UP    &kp END   &kp PG_UP                                                    &none    &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp EQUAL    &trans
+      &trans     &none     &kp HOME    &kp UP    &kp END   &kp PG_UP                                                    &none    &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp EQUAL   &kp C_PP
 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                                               ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
       &trans     &none     &kp LEFT   &kp DOWN  &kp RIGHT  &kp PG_DN                                                    &none    &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp MINUS    &none
 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┬──────────╮   ╭──────────┬──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-      &trans     &none      &none      &none      &none      &none      &trans     &trans         &trans     &trans   &kp KP_N0  &kp KP_N1  &kp KP_N2  &kp KP_N3   &kp DOT     &trans
+      &trans     &none   &kp LA(LEFT)  &none   &kp LA(RIGHT) &none      &trans     &trans         &trans     &trans   &kp KP_N0  &kp KP_N1  &kp KP_N2  &kp KP_N3   &kp DOT     &trans
 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
                                        &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
 //                                  ╰──────────┴──────────┴──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────┴──────────┴──────────╯
@@ -69,32 +69,31 @@ bindings = <
 }; // END layer_1
 
 layer_2 { // symbols and braces
-sensor-bindings = <&inc_dec_kp N O &inc_dec_kp C_VOL_UP C_VOL_DN>;
+sensor-bindings = <&inc_dec_kp N O &inc_dec_kp C_NEXT C_PREV>; // skip/rewind tracks and pause/play
 bindings = <
-// TODO: symbols
-// TODO: braces (maybe brace where default is left and shift makes right?)
 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮                                               ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-      &trans     &none      &none      &none      &none      &none                                                      &none      &none      &none      &none      &none      &trans
+      &trans   &kp GRAVE   &kp EXCL    &kp AT    &kp HASH   &kp DLLR                                                  &kp PRCNT  &kp CARET   &kp AMPS  &kp ASTRK  &kp EQUAL   &kp C_PP
 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                                               ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-      &trans     &none      &none      &none      &none      &none                                                      &none      &none      &none      &none      &none      &none
+      &trans     &none     &kp LPAR   &kp RPAR   &kp LBKT   &kp RBKT                                                   &kp LBRC   &kp RBRC   &kp PIPE   &kp BSLH   &kp SEMI   &kp SQT
 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┬──────────╮   ╭──────────┬──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-      &trans     &none      &none      &none      &none      &none      &trans     &trans         &trans     &trans     &none      &none      &none      &none      &none      &trans
+      &trans     &none    &kp MINUS  &kp UNDER  &kp EQUAL   &kp PLUS    &trans     &trans         &trans     &trans     &none      &none      &kp LT     &kp GT    &kp FSLH    &trans
 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
                                        &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
 //                                  ╰──────────┴──────────┴──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────┴──────────┴──────────╯
 >;
 }; // END layer_2
 
-layer_3 { // funciton keys and others
-// TODO: Function keys and obscure stuff like printscreen/brightness/insert
-sensor-bindings = <&inc_dec_kp N O &inc_dec_kp C_VOL_UP C_VOL_DN>;
+layer_3 { // funciton keys and bluetooth
+// TODO: obscure stuff like printscreen/brightness/insert
+sensor-bindings = <&inc_dec_kp N O &inc_dec_kp C_VOL_UP C_VOL_DN>; // brightness (because I can't come up with another knob thing) and power-off
+#define BTSEL &bt BT_SEL
 bindings = <
 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮                                               ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-      &trans     &none      &none      &none      &none      &none                                                      &none      &none      &none      &none      &none      &trans
+    &trans       &none      BTSEL 0    BTSEL 1    BTSEL 2    BTSEL 3                                                    &kp F9    &kp F10    &kp F11    &kp F12     &none    &kp C_PWR
 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                                               ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-      &trans     &none      &none      &none      &none      &none                                                      &none      &none      &none      &none      &none      &none
+      &trans     &none      &none      &none   &out OUT_TOG &bt BT_CLR                                                  &kp F5     &kp F6     &kp F7     &kp F8     &none      &none
 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┬──────────╮   ╭──────────┬──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-      &trans     &none      &none      &none      &none      &none      &trans     &trans         &trans     &trans     &none      &none      &none      &none      &none      &trans
+      &trans     &none      &none      &none     &kp INS   &kp PSCRN    &trans     &trans         &trans     &trans     &kp F1     &kp F2     &kp F3     &kp F4     &none      &trans
 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
                                        &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
 //                                  ╰──────────┴──────────┴──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────┴──────────┴──────────╯
