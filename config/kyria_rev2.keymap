@@ -6,7 +6,8 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-// #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
 /* &bt (bluetooth) reference
  * BT_CLR	Clear bond information between the keyboard and host for the selected profile.
  * BT_NXT	Switch to the next profile, cycling through to the first one when the end is reached.
@@ -84,7 +85,6 @@ bindings = <
 }; // END layer_2
 
 layer_3 { // funciton keys and bluetooth
-// TODO: obscure stuff like printscreen/brightness/insert
 sensor-bindings = <&inc_dec_kp N O &inc_dec_kp C_VOL_UP C_VOL_DN>; // brightness (because I can't come up with another knob thing) and power-off
 #define BTSEL &bt BT_SEL
 bindings = <
