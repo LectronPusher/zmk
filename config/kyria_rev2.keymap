@@ -8,6 +8,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
+
 /* &bt (bluetooth) reference
  * BT_CLR	Clear bond information between the keyboard and host for the selected profile.
  * BT_NXT	Switch to the next profile, cycling through to the first one when the end is reached.
@@ -47,7 +48,7 @@ bindings = <
 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                                               ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
      &kp ESC     &kp A      &kp S      &kp D      &kp F      &kp G                                                      &kp H      &kp J      &kp K      &kp L     &kp SEMI   &kp SQT
 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┬──────────╮   ╭──────────┬──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-      &mo 1      &kp Z      &kp X      &kp C      &kp V      &kp B    &kp LALT    &kp LALT        &none      &none      &kp N      &kp M    &kp COMMA   &kp DOT    &kp FSLH    &mo 2
+      &mo 1      &kp Z      &kp X      &kp C      &kp V      &kp B    &kp LCTRL   &kp LALT        &none      &none      &kp N      &kp M    &kp COMMA   &kp DOT    &kp FSLH    &mo 2
 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
                                        &none    &kp LMETA   &kp DEL   &kp LSHFT  &kp LCTRL      &kp ENTER  &kp SPACE   &kp BSPC  &kp LCTRL  &kp K_APP
 //                                  ╰──────────┴──────────┴──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────┴──────────┴──────────╯
@@ -86,10 +87,9 @@ bindings = <
 
 layer_3 { // funciton keys and bluetooth
 sensor-bindings = <&inc_dec_kp N O &inc_dec_kp C_VOL_UP C_VOL_DN>; // brightness and power-off
-#define BTSEL &bt BT_SEL
 bindings = <
 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮                                               ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-      &trans     &none  &bt BTSEL 0 &bt BTSEL 1 &bt BTSEL 2 &bt BTSEL 3                                                 &kp F9    &kp F10    &kp F11    &kp F12     &none    &kp C_PWR
+      &trans    &none  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3                                             &kp F9    &kp F10    &kp F11    &kp F12     &none    &kp C_PWR
 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                                               ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
       &trans     &none      &none      &none   &out OUT_TOG &bt BT_CLR                                                  &kp F5     &kp F6     &kp F7     &kp F8     &none      &none
 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┬──────────╮   ╭──────────┬──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
