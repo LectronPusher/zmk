@@ -41,7 +41,6 @@
 compatible = "zmk,keymap";
 
 layer_0 { // the default layer
-sensor-bindings = <&inc_dec_kp N O &inc_dec_kp A B>; // volume up/down and mute (knob is on top right corner - N O left side knob)
 bindings = <
 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮                                               ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
      &kp ESC     &kp Q      &kp W      &kp E      &kp R      &kp T                                                      &kp Y      &kp U      &kp I      &kp O      &kp P    &kp C_MUTE
@@ -50,15 +49,15 @@ bindings = <
 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┬──────────╮   ╭──────────┬──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
       &mo 1      &kp Z      &kp X      &kp C      &kp V      &kp B    &kp LCTRL   &kp LALT       &kp F5     &kp F12     &kp N      &kp M    &kp COMMA   &kp DOT    &kp FSLH    &mo 2
 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-                                       &none    &kp LMETA  &kp LCTRL   &kp BSPC   &kp DEL       &kp ENTER  &kp SPACE   &kp LSHFT &kp LCTRL  &kp K_APP
+                                     &kp LALT   &kp LMETA  &kp LCTRL   &kp BSPC   &kp DEL       &kp ENTER  &kp SPACE  &kp LSHFT  &kp LCTRL  &kp K_APP
 //                                  ╰──────────┴──────────┴──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────┴──────────┴──────────╯
 >;
+sensor-bindings = <&inc_dec_kp N O &inc_dec_kp C_VOL_UP C_VOL_DN>; // volume up/down and mute (knob is on top right corner - N O left side knob)
 }; // END layer_0
 
 
 
 layer_1 { // navigation and numpad
-sensor-bindings = <&inc_dec_kp N O &inc_dec_kp C_BRI_UP C_BRI_DN>; // brightness and sleep
 bindings = <
 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮                                               ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
       &trans     &none     &kp HOME    &kp UP    &kp END   &kp PG_UP                                                    &none    &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp EQUAL &kp C_SLEEP
@@ -70,10 +69,10 @@ bindings = <
                                        &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
 //                                  ╰──────────┴──────────┴──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────┴──────────┴──────────╯
 >;
+sensor-bindings = <&inc_dec_kp N O &inc_dec_kp C_BRI_UP C_BRI_DN>; // brightness and sleep
 }; // END layer_1
 
 layer_2 { // symbols and braces
-sensor-bindings = <&inc_dec_kp N O &inc_dec_kp C_NEXT C_PREV>; // skip/rewind tracks and pause/play
 bindings = <
 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮                                               ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
       &trans   &kp GRAVE   &kp EXCL    &kp AT    &kp HASH   &kp DLLR                                                  &kp PRCNT  &kp CARET   &kp AMPS  &kp ASTRK  &kp EQUAL   &kp C_PP
@@ -85,10 +84,10 @@ bindings = <
                                        &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
 //                                  ╰──────────┴──────────┴──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────┴──────────┴──────────╯
 >;
+sensor-bindings = <&inc_dec_kp N O &inc_dec_kp C_NEXT C_PREV>; // skip/rewind tracks and pause/play
 }; // END layer_2
 
 layer_3 { // funciton keys and bluetooth
-sensor-bindings = <&inc_dec_kp N O &inc_dec_kp C_VOL_UP C_VOL_DN>; // brightness and power-off
 bindings = <
 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮                                               ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
       &trans    &none  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3                                             &kp F9     &kp F10    &kp F11    &kp F12     &none    &kp C_PWR
@@ -100,6 +99,7 @@ bindings = <
                                        &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
 //                                  ╰──────────┴──────────┴──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────┴──────────┴──────────╯
 >;
+sensor-bindings = <&inc_dec_kp N O &inc_dec_kp C_VOL_UP C_VOL_DN>; // brightness and power-off
 }; // END layer_3
 
 }; // END keymap
