@@ -41,7 +41,7 @@
 compatible = "zmk,keymap";
 
 layer_0 { // the default layer
-sensor-bindings = <&inc_dec_kp N O &inc_dec_kp C_VOL_UP C_VOL_DN>; // volume up/down and mute (knob is on top right corner - N O left side knob)
+sensor-bindings = <&inc_dec_kp N O &inc_dec_kp A B>; // volume up/down and mute (knob is on top right corner - N O left side knob)
 bindings = <
 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮                                               ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
      &kp ESC     &kp Q      &kp W      &kp E      &kp R      &kp T                                                      &kp Y      &kp U      &kp I      &kp O      &kp P    &kp C_MUTE
