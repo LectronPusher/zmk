@@ -16,6 +16,9 @@
  * BT_SEL	Select the 0-indexed profile by number. Please note: this definition must include a number as an argument in the keymap to work correctly. eg. BT_SEL 0
  */
 
+// keymap info: https://zmk.dev/docs/features/keymaps
+// keymap codes: https://zmk.dev/docs/codes
+
 / {
 // 	// example combos from docs:
 // 	combos {
@@ -51,45 +54,44 @@ bindings = <
 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┬──────────╮   ╭──────────┬──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
       &mo 1      &kp Z      &kp X      &kp C      &kp V      &kp B     &kp INS   &kp PSCRN        &kp F5    &kp F12     &kp N      &kp M    &kp COMMA   &kp DOT    &kp FSLH    &mo 2
 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-                                     &kp LMETA   &kp DEL   &kp BSPC   &kp LSHFT   &kp LALT      &kp ENTER  &kp SPACE  &kp LCTRL  &kp K_APP    &mo 3
+                                     &kp LMETA   &kp DEL    &kp BSPC  &kp LSHFT   &kp LALT      &kp ENTER  &kp SPACE  &kp LCTRL  &kp K_APP    &mo 3
 //                                  ╰──────────┴──────────┴──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────┴──────────┴──────────╯
 >;
-sensor-bindings = <&inc_dec_kp N O &inc_dec_kp C_VOL_DN C_VOL_UP>; // volume up/down and mute (knob is on top right corner - N O left side knob)
-}; // END layer_0
+sensor-bindings = <&inc_dec_kp N O &inc_dec_kp C_VOL_DN C_VOL_UP>; // volume up/down and mute (knob is on top right corner - NO left side knob)
+};
 
 
 
-layer_1 { // navigation and numpad
+layer_1 { // navigation and numbers (includes symbols on numbers, although some will be repeated eslewhere)
 bindings = <
 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮                                               ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-      &trans     &none     &kp HOME    &kp UP    &kp END   &kp PG_UP                                                    &none    &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp EQUAL &kp C_SLEEP
+      &trans     &none     &kp HOME    &kp UP    &kp END   &kp PG_UP                                                  &kp GRAVE    &kp N7     &kp N8     &kp N9   &kp EQUAL &kp C_SLEEP
 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                                               ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-      &trans     &none     &kp LEFT   &kp DOWN  &kp RIGHT  &kp PG_DN                                                    &none    &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp MINUS    &trans
+      &trans     &none     &kp LEFT   &kp DOWN  &kp RIGHT  &kp PG_DN                                                    &none      &kp N4     &kp N5     &kp N6   &kp MINUS    &trans
 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┬──────────╮   ╭──────────┬──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-      &trans     &none   &kp LA(LEFT)  &none   &kp LA(RIGHT) &none      &trans     &trans         &trans     &trans   &kp KP_N0  &kp KP_N1  &kp KP_N2  &kp KP_N3   &kp DOT     &trans
+      &trans     &none   &kp LA(LEFT)  &none   &kp LA(RIGHT) &none      &trans     &trans         &trans     &trans     &kp N0     &kp N1     &kp N2     &kp N3    &kp BSLH    &trans
 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
                                        &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
 //                                  ╰──────────┴──────────┴──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────┴──────────┴──────────╯
 >;
 sensor-bindings = <&inc_dec_kp N O &inc_dec_kp C_BRI_DN C_BRI_UP>; // brightness and sleep
-}; // END layer_1
+};
 
 
-
-layer_2 { // symbols and braces
+layer_2 { // braces and parens
 bindings = <
 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮                                               ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-      &trans   &kp GRAVE   &kp EXCL    &kp AT    &kp HASH   &kp DLLR                                                  &kp PRCNT  &kp CARET   &kp AMPS  &kp ASTRK  &kp EQUAL   &kp C_PP
+      &trans   &kp GRAVE    &none      &none     &kp LPAR   &kp RPAR                                                    &none      &none      &none      &none      &none     &kp C_PP
 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                                               ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-      &trans     &none     &kp LPAR   &kp RPAR   &kp LBKT   &kp RBKT                                                   &kp LBRC   &kp RBRC   &kp PIPE   &kp BSLH   &kp SEMI   &kp SQT
+      &trans     &none      &none      &none     &kp LBKT   &kp RBKT                                                    &none      &none      &none      &none      &none      &trans
 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┬──────────╮   ╭──────────┬──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-      &trans     &none    &kp MINUS  &kp UNDER  &kp EQUAL   &kp PLUS    &trans     &trans         &trans     &trans     &none      &none      &kp LT     &kp GT    &kp FSLH    &trans
+      &trans     &none      &none      &none     &kp LBRC   &kp RBRC    &trans     &trans         &trans     &trans     &none      &none      &none      &none      &none      &trans
 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
                                        &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
 //                                  ╰──────────┴──────────┴──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────┴──────────┴──────────╯
 >;
-sensor-bindings = <&inc_dec_kp N O &inc_dec_kp C_PREV C_NEXT>; // skip/rewind tracks and pause/play
-}; // END layer_2
+sensor-bindings = <&inc_dec_kp N O &inc_dec_kp C_PREV C_NEXT>; // skip/rewind tracks and pause/play (C_PP)
+};
 
 
 
@@ -106,7 +108,7 @@ bindings = <
 //                                  ╰──────────┴──────────┴──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────┴──────────┴──────────╯
 >;
 sensor-bindings = <&inc_dec_kp N O &inc_dec_kp C_VOL_DN C_VOL_UP>; // brightness and power-off
-}; // END layer_3
+};
 
 
 
