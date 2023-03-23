@@ -1,14 +1,16 @@
 
-This is my keymap for the Kyria. I use a common set of keys in the thumb clusters, bottom row, and outside columns, with four total layers for different functionality.
+### Kyria zmk-config
+
+This is my ZMK keymap for the Kyria. I have common keys in the thumb clusters, bottom row, and outside columns and four momentary hold layers with different functionalities for the inner keys.
 
 The common keys are mostly modifiers like Ctrl/Shift or extremely common keys like Space, Backspace, Return, Tab, Esc, etc. Also single quote. Don't worry about it. The bottom leftmost and bottom rightmost keys are the layer shifting keys. Layer 0 is default, holding the left key is layer 1, holding the right is layer 2, and holding both is layer 3.
 
 1. Layer 0 is a basic QWERTY
 2. Layer 1 has arrows and PgUp/PgDn; Home/End on the left hand and a numpad arrangement with some other symbols on the left hand. The numbers use their normal shift symbols instead of the numpad symbols for easier access
 3. Layer 2 has braces and parens on the left hand and currently nothing on the right, although I might move the F keys there
-4. Layer 3 has bluetooth controls on th eleft hand, and the F keys on the right
+4. Layer 3 has bluetooth controls on the left hand, and the F keys on the right
 
-##### Guide to update the keymap
+#### Guide to update the keymap
 
 1. update the kyria.keymap file
    a. check [https://zmk.dev/docs/codes](https://zmk.dev/docs/codes) for the keypress codes
