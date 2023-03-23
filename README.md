@@ -12,18 +12,18 @@ The common keys are mostly modifiers like Ctrl/Shift or extremely common keys li
 
 #### Guide to update the keymap
 
-1. update the kyria.keymap file
+1. update the kyria.keymap file  
    a. check [https://zmk.dev/docs/codes](https://zmk.dev/docs/codes) for the keypress codes
 2. git push
 3. wait for the github action to complete
 4. download the generated firmware.zip file
 5. extract it into the two firmware files for each side
 6. copy each file into the kyria
-7. then, for each side of the board:
-   a. enter bootloader mode by double-pressing the reset key
-   b. connect the keyboard to the laptop with a cable
-   c. mount it as a USB drive
-   d. copy the firmware file to the drive
-   e. wait for the drive to show up as empty/disconnected
-   f. unplug the keyboard
+7. then, for each side of the board:  
+   a. enter bootloader mode by double-pressing the reset key  
+   b. connect the keyboard to the laptop with a cable  
+   c. mount it as a USB drive  
+   d. copy the firmware file to the drive  
+   e. wait for the drive to show up as empty/disconnected  
+   f. unplug the keyboard  
 7. done!
